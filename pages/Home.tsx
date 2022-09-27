@@ -2,7 +2,7 @@ import Simple from "../Component/navbar";
 import {Box, SimpleGrid, VStack} from "@chakra-ui/react";
 import {CartCategory} from "../Component/cartCategory";
 import {Categories} from "../Component/Constant/data";
-import CaptionCarousel from "../Component/Carousel";
+import CardCarousel from "../Component/Carousel";
 
 export default function Home() {
     return (<VStack>
@@ -14,6 +14,6 @@ export default function Home() {
            <CartCategory title={cat.title} description={cat.description}></CartCategory>
         ))}
         </SimpleGrid>
-        <CaptionCarousel></CaptionCarousel>
+        <CardCarousel></CardCarousel>
     </VStack>)
 }

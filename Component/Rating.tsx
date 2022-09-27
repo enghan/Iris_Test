@@ -1,6 +1,6 @@
 import React from "react";
-import {BsStar, BsStarFill, BsStarHalf} from "react-icons/all";
-import {Box} from "@chakra-ui/react";
+import {BsStar, BsStarFill, BsStarHalf} from "react-icons/bs";
+import {Box, HStack} from "@chakra-ui/react";
 
 interface RatingProps {
     rating: number;
@@ -9,7 +9,8 @@ interface RatingProps {
 
 export  default function Rating({ rating, numReviews }: RatingProps) {
     return (
-        <Box  alignItems="center">
+
+        <HStack alignItems="center">
             {Array(5)
                 .fill('')
                 .map((_, i) => {
@@ -19,7 +20,7 @@ export  default function Rating({ rating, numReviews }: RatingProps) {
                             <BsStarFill
                                 key={i}
                                 style={{ marginLeft: '1' }}
-                                color={i < rating ? 'teal.500' : 'gray.300'}
+                                color={i < rating ? 'brand.orangeLight' : 'brand.orangeLight'}
                             />
                         );
                     }
@@ -28,9 +29,7 @@ export  default function Rating({ rating, numReviews }: RatingProps) {
                     }
                     return <BsStar key={i} style={{ marginLeft: '1' }} />;
                 })}
-            <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                {numReviews} review{numReviews > 1 && 's'}
-            </Box>
-        </Box>
+
+        </HStack>
     );
 }

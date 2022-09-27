@@ -69,8 +69,8 @@ export default function Simple() {
                             rightIcon={<ChevronDownIcon/>}
                             minW={0}>
                             <HStack>
-                                <Icon boxSize={4}  color={'#1E5B63'} as={BsUiRadiosGrid}/>
-                                <Text  color={'#1E5B63'}fontSize={'l'} textColor={'#1E5B63'} fontWeight={600}>Category</Text>
+                                <Icon boxSize={4}  color={'brand.textGray'} as={BsUiRadiosGrid}/>
+                                <Text  color={'brand.textGray'}fontSize={'l'} textColor={'brand.textGray'} fontWeight={600}>Category</Text>
                             </HStack>
 
                         </MenuButton>
@@ -90,17 +90,17 @@ export default function Simple() {
                         <InputGroup w='calc(40vh)' pr={'2'}    display={{base: 'none', md: 'flex'}}>
                             <InputLeftElement
                                 pointerEvents='none'
-                                color={"#AAAAAA"}
+                                color={"brand.dark"}
                                 fontSize='1.2em'
                             />
-                            <Input placeholder='search' defaultValue={'search'} borderColor={'#AAAAAA'}/>
+                            <Input placeholder='search' defaultValue={'search'} borderColor={'brand.dark'}/>
                             <InputLeftElement children={<Search2Icon color={"brand.gray"}/>}/>
                         </InputGroup>
 
                         <IconButton
                             size={'s'}
                             icon={<BsThreeDots/>}
-                            borderColor={'#AAAAAA'}
+                            borderColor={'brand.dark'}
                             border={'solid'}
                             borderWidth={'1px'}
                             aria-label={'menu'}
@@ -109,8 +109,8 @@ export default function Simple() {
                             display={{base: 'none', md: 'flex'}}
                         />
                         <Spacer w='calc(10vh)' />
-                        <Icon boxSize={6} color={'#1E5B63'}  as={BsJournalCheck}    display={{base: 'none', md: 'flex'}}/>
-                        <Text pl={'2'} pr={'2'} fontSize={'l'} textColor={'#1E5B63'} fontWeight={600} display={{base: 'none', md: 'flex'}}>Placement
+                        <Icon boxSize={6} color={'brand.textGray'}  as={BsJournalCheck}    display={{base: 'none', md: 'flex'}}/>
+                        <Text pl={'2'} pr={'2'} fontSize={'l'} textColor={'brand.textGray'} fontWeight={600} display={{base: 'none', md: 'flex'}}>Placement
                             Test</Text>
 
                         <Menu>
@@ -182,7 +182,7 @@ export default function Simple() {
 
             </Box>
 
-            <Text p={10} fontSize={'45px'} fontWeight={'bold'} color={'#1E5B63'}>Categories</Text>
+            <Text p={10} fontSize={'45px'} fontWeight={'bold'} color={'brand.textGray'}>Categories</Text>
         </>
     );
 }
