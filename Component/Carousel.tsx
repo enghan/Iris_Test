@@ -1,11 +1,21 @@
 import React from 'react';
-import {Box, Flex, IconButton, Image, Tooltip, useBreakpointValue, useColorModeValue,} from '@chakra-ui/react';
-// import Rating from "./Rating";
+import {
+    Box,
+    chakra,
+    Flex,
+    Icon,
+    IconButton,
+    Image,
+    Tooltip,
+    useBreakpointValue,
+    useColorModeValue,
+} from '@chakra-ui/react';
+ import Rating from "./Rating";
 import {BiLeftArrowAlt, BiRightArrowAlt} from 'react-icons/bi';
 import Slider from 'react-slick';
 import {offers} from "./Constant/data";
+import {ArrowRightIcon} from "@chakra-ui/icons";
 
-// Settings for the slider
 const settings = {
     dots: true,
     arrows: false,
@@ -19,17 +29,12 @@ const settings = {
 };
 
 export default function CaptionCarousel() {
-    // As we have used custom buttons, we need a reference variable to
-    // change the state
+
     const [slider, setSlider] = React.useState<Slider | null>(null);
 
-    // These are the breakpoints which changes the position of the
-    // buttons as the screen size changes
     const top = useBreakpointValue({base: '90%', md: '50%'});
     const side = useBreakpointValue({base: '30%', md: '40px'});
 
-    // This list contains all the data for carousels
-    // This can be static or loaded from a server
     const cards = [
         {
             title: 'Design Projects 1',
@@ -60,7 +65,6 @@ export default function CaptionCarousel() {
             height={'600px'}
             width={'full'}
             overflow={'hidden'}>
-            {/* CSS files for react-slick */}
             <link
                 rel="stylesheet"
                 type="text/css"
@@ -72,7 +76,6 @@ export default function CaptionCarousel() {
                 type="text/css"
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
-            {/* Left Icon */}
             <IconButton
                 aria-label="left-arrow"
                 variant="ghost"
@@ -84,7 +87,6 @@ export default function CaptionCarousel() {
                 onClick={() => slider?.slickPrev()}>
                 <BiLeftArrowAlt size="40px"/>
             </IconButton>
-            {/* Right Icon */}
             <IconButton
                 aria-label="right-arrow"
                 variant="ghost"
@@ -96,7 +98,6 @@ export default function CaptionCarousel() {
                 onClick={() => slider?.slickNext()}>
                 <BiRightArrowAlt size="40px"/>
             </IconButton>
-            {/* Slider */}
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {offers.map(offer => (
                     <Flex p={50} w="full"  alignItems="center" justifyContent="center">
@@ -131,16 +132,16 @@ export default function CaptionCarousel() {
                                         placement={'top'}
                                         color={'gray.800'}
                                         fontSize={'1.2em'}>
-                                        {/*<chakra.a href={'#'} display={'flex'} onClick={resetModal}>*/}
-                                        {/*    <Icon as={ArrowRightIcon} h={5} w={5} alignSelf={'center'} />*/}
-                                        {/*</chakra.a>*/}
+                                        <chakra.a href={'#'} display={'flex'} >
+                                            <Icon as={ArrowRightIcon} h={5} w={5} alignSelf={'center'} />
+                                        </chakra.a>
                                     </Tooltip>
                                 </Flex>
 
-                                {/*<Flex justifyContent="space-between" alignContent="center">*/}
-                                {/*    <Rating rating={offer.rating.rate} numReviews={offer.rating.count} />*/}
+                                <Flex justifyContent="space-between" alignContent="center">
+                                    <Rating rating={offer.rating.rate} numReviews={offer.rating.count} />
 
-                                {/*</Flex>*/}
+                                </Flex>
                             </Box>
                         </Box>
                     </Flex>
