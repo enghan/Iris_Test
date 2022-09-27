@@ -1,9 +1,9 @@
-import HomePage from "../Screens/home";
-import homepage from "../Screens/home";
+
+import Home from "./Home";
 
 
 export default function Index() {
   return (
-  <homepage></homepage>
+  <Home></Home>
   )
 }
