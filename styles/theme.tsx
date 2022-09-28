@@ -25,29 +25,6 @@ const theme = extendTheme({
     },
     components: {
 
-        Button: {
-            baseStyle: {
-                fontWeight: 'bold',
-                textColor: 'brand.textGray',
-                width: '120px',
-                  bg: "brand.gray", rounded: 'md',
-                _hover: {bg: 'brand.orange', color: 'brand.dark'},
-
-                variants: {
-
-                    primary: {
-                        fontWeight: 'bold',
-                        textColor: 'brand.textGray',
-                        width: '100px',
-                        bg: "brand.gray", rounded: 'md',
-                        _hover: {bg: 'brand.orange', color: 'brand.dark'},
-                        },
-                    },
-            },
-        }
-
-
-
     },
 
 

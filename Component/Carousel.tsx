@@ -54,6 +54,11 @@ export default function CardCarousel() {
                 type="text/css"
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
+            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+                {courses.map(course => (
+                    <CoursesCart course={course}></CoursesCart>
+                ))}
+            </Slider>
             <IconButton
                 aria-label="left-arrow"
                 position="absolute"
@@ -86,11 +91,7 @@ export default function CardCarousel() {
                 onClick={() => slider?.slickNext()}>
                 <BiRightArrowAlt size="40px"/>
             </IconButton>
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
-                {courses.map(course => (
-                 <CoursesCart course={course}></CoursesCart>
-                ))}
-            </Slider>
+
         </Box>
     );
 }

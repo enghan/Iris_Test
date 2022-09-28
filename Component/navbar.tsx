@@ -94,7 +94,7 @@ export default function Simple() {
                                 fontSize='1.2em'
                             />
                             <Input placeholder='search' defaultValue={'search'} borderColor={'brand.dark'}/>
-                            <InputLeftElement children={<Search2Icon color={"brand.gray"}/>}/>
+                            <InputLeftElement children={<Search2Icon color={"brand.light"}/>}/>
                         </InputGroup>
 
                         <IconButton
@@ -124,7 +124,7 @@ export default function Simple() {
                                 minW={0}>
                                 <Avatar
                                     size={'sm'}
-                                    src={'/Image/local.png'}
+                                    src={'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png'}
 
                                 />
 
