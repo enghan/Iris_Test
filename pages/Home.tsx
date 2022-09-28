@@ -1,5 +1,5 @@
 import Simple from "../Component/NavBar";
-import {Box, VStack} from "@chakra-ui/react";
+import {Box, Flex, Text, VStack} from "@chakra-ui/react";
 import {Categories} from "../Component/Constant/data";
 import CardCarousel from "../Component/Carousel";
 import React from "react";
@@ -14,18 +14,19 @@ export default function Home() {
         slidesToScroll: 1,
     };
     const [slider, setSlider] = React.useState<Slider | null>(null);
-    return (<VStack>
+    return (
+        <VStack>
         <Box w={'full'}>
-            <Simple></Simple>
+            <Simple />
         </Box>
+
         <Box maxW={'60%'} w={'full'} h={'200'}>
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {Categories.map(cat => (
                     <CartCategory key={cat.id} title={cat.title} description={cat.description}></CartCategory>
                 ))}
-            </Slider></Box>
-
-
-        <CardCarousel></CardCarousel>
+            </Slider>
+        </Box>
+       <CardCarousel />
     </VStack>)
 }

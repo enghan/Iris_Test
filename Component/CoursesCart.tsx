@@ -6,6 +6,7 @@ import StarRatings from 'react-star-ratings';
 export default function CoursesCart({course}) {
     return (
         <Flex w="full" p={'10'} alignItems="center" justifyContent="center">
+
             <Box
                 bg={useColorModeValue('white', 'gray.800')}
                 maxW="sm"

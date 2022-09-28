@@ -18,6 +18,7 @@ export default function CartCategory({title, description}) {
             h={'150'}
             maxW={'130px'}
         >
+
             <Stack>
                 <Text
                     fontSize={'xl'}

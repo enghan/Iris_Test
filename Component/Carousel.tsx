@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, IconButton, useBreakpointValue,} from '@chakra-ui/react';
+import {Box, IconButton, Text, useBreakpointValue,} from '@chakra-ui/react';
 import {BiLeftArrowAlt, BiRightArrowAlt} from 'react-icons/bi';
 import Slider from 'react-slick';
 import {courses} from "./Constant/data";
@@ -9,6 +9,7 @@ const settings = {
     dots: true,
     infinite: true,
     autoplay: true,
+    arrows: false,
     speed: 500,
     autoplaySpeed: 5000,
     slidesToShow: 4,
@@ -26,9 +27,11 @@ export default function CardCarousel() {
     return (
         <Box
             position={'relative'}
-            height={'600px'}
+            height={'calc(100vh)'}
             width={'full'}
             overflow={'hidden'}>
+            <Text  p={10} fontSize={'45px'} fontWeight={'bold'} color={'brand.textGray'}>Courses</Text>
+
             <link
                 rel="stylesheet"
                 type="text/css"
@@ -40,7 +43,8 @@ export default function CardCarousel() {
                 type="text/css"
                 href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
-            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+
+                <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {courses.map(course => (
                     <CoursesCart course={course}></CoursesCart>
                 ))}
