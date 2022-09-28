@@ -6,12 +6,7 @@ const theme = extendTheme({
         background: 'brand.primary',
     },
     fonts: {
-        body: 'Droid Arabic Kufi, sans-serif',
-        heading: 'Georgia, serif',
-        monospace: 'Menlo, monospace'
-
-
-
+        body: ' sans-serif Gotham',
     },
     colors: {
         brand: {

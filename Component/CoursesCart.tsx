@@ -39,11 +39,15 @@ export default function CoursesCart({course}) {
                             starSpacing="2px"
                         />
                     </Flex>
-                    <HStack pt={'2'}> <Avatar
-                        size={'xs'}
-                        src={'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                        }
-                    />
+                    <HStack pt={'2'}>
+                        <Avatar
+                            size={'md'}
+                            showBorder
+                            borderColor={'brand.orangeLight'}
+                            borderWidth={'3px'}
+                            src={'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
+                            }
+                        />
                         <Box as="span" ml="2" color="brand.dark" fontSize="sm">
                             {course.name}
                         </Box>

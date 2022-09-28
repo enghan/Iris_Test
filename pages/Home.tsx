@@ -9,10 +9,8 @@ import CartCategory from "../Component/CartCategory";
 export default function Home() {
     const settings = {
         dots: false,
-        arrows: false,
-        fade: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 6,
         slidesToScroll: 1,
     };
     const [slider, setSlider] = React.useState<Slider | null>(null);
@@ -20,11 +18,13 @@ export default function Home() {
         <Box w={'full'}>
             <Simple></Simple>
         </Box>
-        <Slider {...settings} ref={(slider) => setSlider(slider)}>
-            {Categories.map(cat => (
-                <CartCategory title={cat.title} description={cat.description}></CartCategory>
-            ))}
-        </Slider>
+        <Box maxW={'60%'} w={'full'} h={'200'}>
+            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+                {Categories.map(cat => (
+                    <CartCategory key={cat.id} title={cat.title} description={cat.description}></CartCategory>
+                ))}
+            </Slider></Box>
+
 
         <CardCarousel></CardCarousel>
     </VStack>)

@@ -1,49 +1,43 @@
-import {
-    Box,
-    Center,
-    Stack,
-    Text,
-    useColorModeValue,
-} from "@chakra-ui/react";
+import {Box, Stack, Text,} from "@chakra-ui/react";
 import React from "react";
 
 
-export default function CartCategory({ title, description}) {
+export default function CartCategory({title, description}) {
 
     return (
 
-        <Center  >
-            <Box
-                boxShadow={'xs'}
-                rounded={'md'}
-                border={'solid'}
-                borderWidth={'2px'}
-                borderColor={'brand.gray'}
-                bg={'brand.light'}
-               >
-                <Stack
-                    textAlign={'start'}
-                    p={5}
-                    color={useColorModeValue('brand.gray', 'brand.gray')}
-                    align={'start'}>
-                    <Text
-                        fontSize={'sm'}
-                        fontWeight={500}
-                        color={'brand.textGray'}
-                        rounded={'full'}>
-                        {title}
-                    </Text>
-                    <Text
-                        fontSize={'sm'}
-                        fontWeight={500}
-                        color={'brand.textGray'}
-                        rounded={'full'}>
-                        {description}
-                    </Text>
+        <Box
+            boxShadow={'xl'}
+            rounded={'xl'}
+            border={'solid'}
+            borderWidth={'2px'}
+            borderColor={'brand.gray'}
+            bg={'brand.light'}
+            p={'2'}
+            w={'full'}
+            h={'150'}
+            maxW={'130px'}
+        >
+            <Stack>
+                <Text
+                    fontSize={'xl'}
+                    fontWeight={'bold'}
+                    top={'12'}
+                    left={'4'}
+                    color={'brand.textGray'}>
+                    {title}
+                </Text>
+                <Text
+                    fontSize={'sm'}
+                    fontWeight={'500'}
+                    fontStyle={'italic'}
+                    color={'brand.textGray'}>
+                    {description}
+                </Text>
 
-              </Stack>
-            </Box>
-        </Center>
+            </Stack>
+        </Box>
+
 
     )
 }

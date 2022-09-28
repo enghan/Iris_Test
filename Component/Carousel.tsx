@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    Box,
-    IconButton,
-    Tooltip,
-    useBreakpointValue,
-} from '@chakra-ui/react';
+import {Box, IconButton, useBreakpointValue,} from '@chakra-ui/react';
 import {BiLeftArrowAlt, BiRightArrowAlt} from 'react-icons/bi';
 import Slider from 'react-slick';
 import {courses} from "./Constant/data";
@@ -12,13 +7,11 @@ import CoursesCart from "./CoursesCart";
 
 const settings = {
     dots: true,
-    arrows: false,
-    fade: true,
     infinite: true,
     autoplay: true,
     speed: 500,
     autoplaySpeed: 5000,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
 };
 
