@@ -2,7 +2,7 @@ import {Avatar, Button, MenuButton} from "@chakra-ui/react";
 import {ChevronDownIcon} from "@chakra-ui/icons";
 import {ReactNode} from "react";
 
-export default function menuItemButton({children}){
+export default function MenuItemButton({children}){
     return(
         <MenuButton
             as={Button}

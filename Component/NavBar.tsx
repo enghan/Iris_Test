@@ -1,9 +1,8 @@
-import {ReactNode} from 'react';
+
 import {BsFillBellFill, BsJournalCheck, BsThreeDots,BsUiRadiosGrid} from "react-icons/bs";
 import {
     Avatar,
     Box,
-    Button,
     Flex,
     HStack,
     Icon,
@@ -12,9 +11,7 @@ import {
     Input,
     InputGroup,
     InputLeftElement,
-    Link,
     Menu,
-    MenuButton,
     MenuDivider,
     MenuItem,
     MenuList, Spacer,
@@ -23,24 +20,10 @@ import {
     useColorModeValue,
     useDisclosure,
 } from '@chakra-ui/react';
-import {ChevronDownIcon, CloseIcon, HamburgerIcon, Search2Icon} from '@chakra-ui/icons';
-import menuItemButton from './menuItem'
-
-const Links = ['Courses', 'Blogs', 'Contact Us'];
-
-const NavLink = ({children}: { children: ReactNode }) => (
-    <Link
-        px={5}
-        py={5}
-        rounded={'md'}
-        _hover={{
-            textDecoration: 'underLine',
-            bg: useColorModeValue('gray.200', 'gray.700'),
-        }}
-        href={'#'}>
-        {children}
-    </Link>
-);
+import { CloseIcon, HamburgerIcon, Search2Icon} from '@chakra-ui/icons';
+import MenuItemButton from "./MenuItem";
+import {Links} from "./Constant/data";
+import {NavLink} from "./NavigatorLink";
 
 export default function Simple() {
     const {isOpen, onOpen, onClose} = useDisclosure();
@@ -61,22 +44,14 @@ export default function Simple() {
                             <Image src={'/Image/logo.png'}/>
                         </Box>
                         <Menu>
-                            <MenuButton
-                            as={Button}
-                            rounded={'full'}
-                            variant={'link'}
-                            cursor={'pointer'}
-                            rightIcon={<ChevronDownIcon/>}
-                            minW={0}>
+                            <MenuItemButton>
                             <HStack>
                                 <Icon boxSize={4}  color={'brand.textGray'} as={BsUiRadiosGrid}/>
                                 <Text  color={'brand.textGray'}fontSize={'l'} textColor={'brand.textGray'} fontWeight={600}>Category</Text>
                             </HStack>
 
-                        </MenuButton>
+                        </MenuItemButton>
                         </Menu>
-
-
                         <HStack
                             as={'nav'}
                             spacing={4}
@@ -115,34 +90,19 @@ export default function Simple() {
 
                         <Menu>
                             <Spacer w='calc(10vh)' />
-                            <MenuButton
-                                as={Button}
-                                rounded={'full'}
-                                variant={'link'}
-                                cursor={'pointer'}
-                                rightIcon={<ChevronDownIcon/>}
-                                minW={0}>
+                            <MenuItemButton>
                                 <Avatar
                                     size={'sm'}
                                     src={'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png'}
 
                                 />
-
-                            </MenuButton>
-
-
+                            </MenuItemButton>
                             <IconButton
                                 size={'md'}
                                 icon={<BsFillBellFill/>}
                                 aria-label={'Notifications'}
                             />
-                            <MenuButton
-                                as={Button}
-                                rounded={'full'}
-                                variant={'link'}
-                                cursor={'pointer'}
-                                rightIcon={<ChevronDownIcon/>}
-                                minW={0}>
+                            <MenuItemButton>
                                 <Avatar
                                     size={'sm'}
                                     src={
@@ -151,16 +111,12 @@ export default function Simple() {
                                     }
                                 />
 
-                            </MenuButton>
-
-
-
-
+                            </MenuItemButton>
                             <MenuList>
-                                <MenuItem>Link 1</MenuItem>
-                                <MenuItem>Link 2</MenuItem>
+                                <MenuItem>List 1</MenuItem>
+                                <MenuItem>List 2</MenuItem>
                                 <MenuDivider/>
-                                <MenuItem>Link 3</MenuItem>
+                                <MenuItem>List 3</MenuItem>
                             </MenuList>
 
                         </Menu>

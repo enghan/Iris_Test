@@ -1,4 +1,5 @@
-export const  Categories1 = ['English Cources', 'clinic', 'favorite']
+
+export const Links = ['Courses', 'Blogs', 'Contact Us'];
 export const   Categories= [
     {
         id: 1,

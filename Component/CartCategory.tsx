@@ -8,7 +8,7 @@ import {
 import React from "react";
 
 
-export function CartCategory({ title, description}) {
+export default function CartCategory({ title, description}) {
 
     return (
 

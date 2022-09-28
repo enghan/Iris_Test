@@ -1,21 +1,14 @@
 import React from 'react';
 import {
     Box,
-    chakra,
-    Flex,
-    Icon,
     IconButton,
-    Image,
     Tooltip,
     useBreakpointValue,
-    useColorModeValue,
 } from '@chakra-ui/react';
- import Rating from "./Rating";
 import {BiLeftArrowAlt, BiRightArrowAlt} from 'react-icons/bi';
 import Slider from 'react-slick';
 import {courses} from "./Constant/data";
-import {ArrowRightIcon} from "@chakra-ui/icons";
-import CoursesCart from "./coursescart";
+import CoursesCart from "./CoursesCart";
 
 const settings = {
     dots: true,

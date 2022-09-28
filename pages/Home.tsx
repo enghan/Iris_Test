@@ -1,10 +1,10 @@
-import Simple from "../Component/navbar";
+import Simple from "../Component/NavBar";
 import {Box, VStack} from "@chakra-ui/react";
-import {CartCategory} from "../Component/cartCategory";
-import {Categories, courses} from "../Component/Constant/data";
+import {Categories} from "../Component/Constant/data";
 import CardCarousel from "../Component/Carousel";
 import React from "react";
 import Slider from 'react-slick';
+import CartCategory from "../Component/CartCategory";
 
 export default function Home() {
     const settings = {

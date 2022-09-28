@@ -27,16 +27,6 @@ export default function CoursesCart({course}) {
                         >
                             {course.title}
                         </Box>
-                        {/*<Tooltip*/}
-
-                        {/*    bg="white"*/}
-                        {/*    placement={'top'}*/}
-                        {/*    color={'gray.800'}*/}
-                        {/*    fontSize={'1.2em'}>*/}
-                        {/*    <chakra.a href={'#'} display={'flex'}>*/}
-                        {/*        <Icon as={ArrowRightIcon} h={5} w={5} alignSelf={'center'}/>*/}
-                        {/*    </chakra.a>*/}
-                        {/*</Tooltip>*/}
                     </Flex>
                     <Flex justifyContent="space-between" alignContent="center" pt={'2'}>
                         <StarRatings
