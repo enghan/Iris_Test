@@ -1,15 +1,27 @@
-import {Avatar, Box, Button, Divider, Flex, HStack, Icon, Image, Text, useColorModeValue} from "@chakra-ui/react";
+import {
+    Avatar,
+    Box,
+    Button,
+    Divider,
+    Flex,
+    HStack,
+    Icon,
+    Image,
+    Text,
+    useBreakpointValue,
+    useColorModeValue
+} from "@chakra-ui/react";
 import React from "react";
 import {BsClock} from "react-icons/bs";
 import StarRatings from 'react-star-ratings';
 
 export default function CoursesCart({course}) {
     return (
-        <Flex w="full" p={'10'} alignItems="center" justifyContent="center">
+        <Flex w='full' p={'10'} alignItems="center" justifyContent="center">
 
             <Box
                 bg={useColorModeValue('white', 'gray.800')}
-                maxW="sm"
+                maxW={useBreakpointValue({base: '200px', md: 'full'})}
                 borderWidth="1px"
                 rounded="lg"
                 shadow="lg"

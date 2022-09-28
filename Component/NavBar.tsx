@@ -64,7 +64,7 @@ export default function Simple() {
                         </HStack>
                     </HStack>
                     <Flex alignItems={'center'}>
-                        <InputGroup w='calc(40vh)' pr={'2'} display={{base: 'none', md: 'flex'}}>
+                        <InputGroup w='calc(40vh)' boxShadow={'l'} pr={'2'} display={{base: 'none', md: 'flex'}}>
                             <InputLeftElement
                                 pointerEvents='none'
                                 color={"brand.dark"}

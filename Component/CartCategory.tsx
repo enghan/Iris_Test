@@ -1,8 +1,10 @@
-import {Box, Stack, Text,} from "@chakra-ui/react";
+import {Box, Stack, Text, useBreakpointValue,} from "@chakra-ui/react";
 import React from "react";
 
 
 export default function CartCategory({title, description}) {
+    const maxW = useBreakpointValue({base: '70px', md: '140px'});
+    const height = useBreakpointValue({base: '80px', md: '150px'});
 
     return (
 
@@ -13,15 +15,15 @@ export default function CartCategory({title, description}) {
             borderWidth={'2px'}
             borderColor={'brand.gray'}
             bg={'brand.light'}
-            p={'2'}
+            p={useBreakpointValue({base: '1', md: '2'})}
             w={'full'}
-            h={'150'}
-            maxW={'130px'}
+            h={height}
+            maxW={maxW}
         >
 
             <Stack>
                 <Text
-                    fontSize={'xl'}
+                    fontSize={useBreakpointValue({base: 'xs', md: 'xl'})}
                     fontWeight={'bold'}
                     top={'12'}
                     left={'4'}
@@ -29,7 +31,7 @@ export default function CartCategory({title, description}) {
                     {title}
                 </Text>
                 <Text
-                    fontSize={'sm'}
+                    fontSize={useBreakpointValue({base: '2xs', md: 'sm'})}
                     fontWeight={'500'}
                     fontStyle={'italic'}
                     color={'brand.textGray'}>

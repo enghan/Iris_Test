@@ -20,7 +20,7 @@ export default function Home() {
             <Simple />
         </Box>
 
-        <Box maxW={'60%'} w={'full'} h={'200'}>
+        <Box maxW={'60%'} w={'full'} h={'200'} p={'20'}>
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {Categories.map(cat => (
                     <CartCategory key={cat.id} title={cat.title} description={cat.description}></CartCategory>

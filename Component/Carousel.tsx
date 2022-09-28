@@ -29,8 +29,11 @@ export default function CardCarousel() {
             position={'relative'}
             height={'calc(100vh)'}
             width={'full'}
-            overflow={'hidden'}>
-            <Text  p={10} fontSize={'45px'} fontWeight={'bold'} color={'brand.textGray'}>Courses</Text>
+            maxW={useBreakpointValue({base: '80%', md: 'full'})}
+            overflow={'hidden'}
+            p={'20'}
+        >
+            <Text  p={10} fontSize= '45px' fontWeight={'bold'} color={'brand.textGray'}>Courses</Text>
 
             <link
                 rel="stylesheet"
